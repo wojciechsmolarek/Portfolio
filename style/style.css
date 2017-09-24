@@ -1,0 +1,490 @@
+* {
+  box-sizing: border-box; }
+
+html, * {
+  margin: 0 auto;
+  font-family: 'Segoe UI'; }
+
+h1, h2, h3, h4, h5, h6 {
+  text-decoration: none;
+  font-weight: 400; }
+
+.wrapper {
+  width: 1680px;
+  max-width: 90%;
+  margin-left: auto;
+  margin-right: auto; }
+
+.header-container {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+  background: #ECE9E6;
+  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #FFFFFF, #ECE9E6);
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #FFFFFF, #ECE9E6);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */ }
+  .header-container .navigation {
+    text-align: right;
+    line-height: 100px;
+    width: 100%;
+    height: 100px; }
+    .header-container .navigation h6 {
+      display: flex;
+      justify-content: flex-end;
+      padding-right: 95px;
+      text-transform: uppercase;
+      font-size: 19px;
+      font-weight: 300;
+      padding-top: 9px; }
+    .header-container .navigation #hamburger {
+      display: none;
+      position: absolute;
+      right: 0; }
+    .header-container .navigation .hamburger-button {
+      display: inline-block;
+      position: absolute;
+      top: 50px;
+      right: 50px;
+      z-index: 999; }
+      .header-container .navigation .hamburger-button:hover {
+        cursor: pointer; }
+      .header-container .navigation .hamburger-button span {
+        display: block;
+        width: 30px;
+        height: 3px;
+        background: #131418;
+        margin-bottom: 5px;
+        border-radius: 5px;
+        transition: transform 100ms linear; }
+    .header-container .navigation .menu-container {
+      width: 400px;
+      height: calc(100vh + 100px);
+      text-align: left;
+      background: #fff;
+      position: absolute;
+      top: -100px;
+      right: -100vw;
+      transition: 0.3s transform ease-in-out;
+      z-index: 998; }
+      .header-container .navigation .menu-container ul {
+        width: 100%;
+        height: 100%;
+        margin-top: 170px; }
+        .header-container .navigation .menu-container ul li {
+          list-style-type: none; }
+          .header-container .navigation .menu-container ul li a {
+            text-decoration: none;
+            text-transform: uppercase;
+            font-weight: 300;
+            color: #131418;
+            font-size: 25px; }
+    .header-container .navigation .text-container {
+      display: block;
+      position: absolute;
+      bottom: 150px; }
+      .header-container .navigation .text-container h2 {
+        text-align: left;
+        font-size: 40px;
+        font-weight: 400; }
+      .header-container .navigation .text-container h1 {
+        text-align: left;
+        font-size: 30px;
+        font-weight: 300;
+        margin-top: -45px;
+        margin-bottom: 10px; }
+      .header-container .navigation .text-container figure {
+        float: left;
+        font-size: 20px;
+        cursor: default; }
+
+#hamburger:checked ~ .menu-container, .menu-container:hover {
+  transform: translateX(-100vw); }
+
+#hamburger:checked ~ .hamburger-button span:first-child {
+  transform: rotate(45deg); }
+#hamburger:checked ~ .hamburger-button span:nth-child(2) {
+  transform: rotate(-45deg);
+  top: 1px;
+  position: absolute; }
+#hamburger:checked ~ .hamburger-button span:nth-child(3) {
+  display: none; }
+
+.section-title {
+  font-size: 40px;
+  font-weight: 300;
+  text-transform: uppercase;
+  padding-top: 202px;
+  padding-bottom: 151px; }
+
+.main-container {
+  width: 100%; }
+  .main-container .about {
+    width: 100%;
+    height: auto;
+    display: flex;
+    background: #fff;
+    padding-bottom: 200px; }
+    .main-container .about p {
+      padding-top: 100px;
+      width: 54%;
+      height: auto;
+      float: left;
+      font-size: 24px;
+      font-weight: 300; }
+    .main-container .about img {
+      width: 45%;
+      height: auto;
+      float: right; }
+  .main-container .offer {
+    width: 100%;
+    height: auto;
+    background: #FCFCFC;
+    padding-bottom: 150px; }
+    .main-container .offer .card-container {
+      width: 100%;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      margin-bottom: 150px; }
+      .main-container .offer .card-container .card {
+        width: 360px;
+        height: 360px;
+        margin: 0;
+        padding: 43px;
+        position: relative;
+        background: #fff;
+        border-radius: 4px;
+        border-bottom-right-radius: 20%;
+        background-color: #ffffff;
+        box-shadow: 0px 1px 2px 0px rgba(90, 91, 95, 0.15);
+        top: 0px;
+        transition: all 0.3s ease-in-out; }
+        .main-container .offer .card-container .card:hover {
+          border-bottom-right-radius: 4px;
+          box-shadow: 0px 16px 22px 0px rgba(90, 91, 95, 0.3);
+          top: -5px; }
+        .main-container .offer .card-container .card .card-title {
+          font-size: 23px;
+          font-weight: 300;
+          margin-top: 12px;
+          cursor: default; }
+        .main-container .offer .card-container .card hr {
+          width: 64px;
+          margin: 0;
+          border: 0;
+          border-bottom: 3px solid #AEA8D3;
+          margin-top: 20px; }
+        .main-container .offer .card-container .card .card-description {
+          width: 100%;
+          height: auto;
+          font-size: 21px;
+          font-weight: 300;
+          margin-top: 20px;
+          cursor: default; }
+  .main-container .project {
+    width: 100%;
+    display: flex;
+    background-color: #FDFDFD; }
+    .main-container .project .timeline {
+      position: relative;
+      display: grid;
+      list-style: none; }
+      .main-container .project .timeline::before {
+        content: " ";
+        position: absolute;
+        top: 202px;
+        bottom: 352px;
+        left: 50%;
+        width: 0.6px;
+        margin-left: -0.3px;
+        background-color: #95989A; }
+      .main-container .project .timeline li {
+        position: relative;
+        width: 75%;
+        padding-bottom: 150px;
+        margin: auto;
+        text-align: left; }
+        .main-container .project .timeline li:nth-child(even) .card {
+          float: right; }
+          .main-container .project .timeline li:nth-child(even) .card::before {
+            content: '';
+            width: 49px;
+            height: 49px;
+            border-radius: 100%;
+            border: 1px solid #95989A;
+            background: #fff;
+            position: absolute;
+            left: calc(50% - 45px);
+            top: calc(50% - 68px); }
+        .main-container .project .timeline li .card {
+          width: 382px;
+          height: auto;
+          min-height: 404px;
+          background: #fff;
+          border: 0.1px solid #95989A;
+          box-shadow: 0px 1px 2px 0px rgba(90, 91, 95, 0.15);
+          border-radius: 4px;
+          clear: both;
+          float: left; }
+          .main-container .project .timeline li .card::before {
+            content: '';
+            width: 49px;
+            height: 49px;
+            border-radius: 100%;
+            border: 1px solid #95989A;
+            background: #fff;
+            position: absolute;
+            left: calc(50% - 45px);
+            top: calc(50% - 135px); }
+          .main-container .project .timeline li .card h3 {
+            text-transform: uppercase;
+            font-weight: 300;
+            font-size: 26px;
+            width: 100%;
+            text-align: center;
+            margin: 35px 0; }
+          .main-container .project .timeline li .card img {
+            width: 100%;
+            height: auto; }
+          .main-container .project .timeline li .card p {
+            font-size: 18px;
+            font-weight: 300;
+            margin: 35px;
+            width: 75%;
+            text-align: center; }
+            .main-container .project .timeline li .card p a {
+              text-decoration: none;
+              font-weight: 400;
+              color: #131418; }
+  .main-container .prices .card-container {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between; }
+    .main-container .prices .card-container .card {
+      position: relative;
+      width: 382px;
+      background: #fff;
+      border: 0.1px solid #95989A;
+      box-shadow: 0px 1px 2px 0px rgba(90, 91, 95, 0.15);
+      border-radius: 4px;
+      margin: 0; }
+      .main-container .prices .card-container .card:first-child {
+        height: 589px; }
+      .main-container .prices .card-container .card:nth-child(2) {
+        height: 735px; }
+      .main-container .prices .card-container .card:nth-child(3) {
+        height: 925px; }
+      .main-container .prices .card-container .card .price-title {
+        width: 80%;
+        text-transform: uppercase;
+        font-size: 29px;
+        font-weight: 300;
+        text-align: center;
+        margin-top: 60px;
+        padding-bottom: 32.5px;
+        border-bottom: 1px solid #131418;
+        position: relative; }
+        .main-container .prices .card-container .card .price-title::before {
+          background: #131418;
+          bottom: -10px;
+          content: "";
+          height: 18px;
+          left: 50%;
+          position: absolute;
+          -webkit-transform: rotate(45deg);
+          -moz-transform: rotate(45deg);
+          -ms-transform: rotate(45deg);
+          -o-transform: rotate(45deg);
+          width: 18px;
+          margin-left: -9px; }
+        .main-container .prices .card-container .card .price-title::after {
+          background: #fff;
+          bottom: -0.29em;
+          content: "";
+          height: 18px;
+          left: 50%;
+          margin-left: -9px;
+          position: absolute;
+          -webkit-transform: rotate(45deg);
+          -moz-transform: rotate(45deg);
+          -ms-transform: rotate(45deg);
+          -o-transform: rotate(45deg);
+          width: 18px; }
+      .main-container .prices .card-container .card .price {
+        font-size: 30px;
+        font-weight: 300;
+        font-style: italic;
+        text-align: center;
+        margin-top: 32.5px;
+        margin-bottom: 58px; }
+      .main-container .prices .card-container .card .product-details {
+        font-size: 19px;
+        line-height: 50px;
+        text-align: center; }
+      .main-container .prices .card-container .card .order {
+        display: table;
+        margin-top: 46px;
+        font-size: 25px;
+        font-weight: 300;
+        font-style: italic;
+        text-transform: uppercase;
+        text-align: center;
+        text-decoration: none;
+        color: #131418;
+        border: 1px solid #131418;
+        border-radius: 4px;
+        padding: 4px 7px; }
+  .main-container .realizations .card-container {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between; }
+    .main-container .realizations .card-container .card {
+      border: 0.1px solid #95989A;
+      box-shadow: 0px 1px 2px 0px rgba(90, 91, 95, 0.15);
+      border-radius: 1px;
+      width: 28%;
+      margin: 0;
+      position: relative; }
+      .main-container .realizations .card-container .card img {
+        width: 100%;
+        height: 100%; }
+      .main-container .realizations .card-container .card .hover {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        z-index: 5;
+        background: #AEA8D3;
+        transition: all 0.5s linear;
+        opacity: 0;
+        padding-top: 20px; }
+        .main-container .realizations .card-container .card .hover:hover {
+          opacity: 1; }
+        .main-container .realizations .card-container .card .hover .hover-title {
+          font-size: 27px;
+          text-transform: uppercase;
+          font-weight: 500;
+          width: 100%;
+          margin: 25px 0 10px 0;
+          text-align: center; }
+        .main-container .realizations .card-container .card .hover .description {
+          width: 100%;
+          margin-bottom: 20px;
+          text-align: center;
+          font-size: 23px;
+          font-weight: 300;
+          text-transform: uppercase; }
+        .main-container .realizations .card-container .card .hover a {
+          display: table;
+          font-size: 25px;
+          font-weight: 300;
+          font-style: italic;
+          text-transform: uppercase;
+          text-align: center;
+          text-decoration: none;
+          color: #131418;
+          border: 1px solid #131418;
+          border-radius: 4px;
+          padding: 4px 7px;
+          transition: all 0.25s linear; }
+          .main-container .realizations .card-container .card .hover a:hover {
+            background: #fff; }
+  .main-container .contact {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    padding-bottom: 190px; }
+    .main-container .contact .left-container {
+      flex: 1;
+      width: 50%;
+      float: left; }
+      .main-container .contact .left-container .label-title {
+        font-size: 23px;
+        font-weight: 300;
+        text-transform: uppercase; }
+      .main-container .contact .left-container .m_top {
+        display: block;
+        margin-bottom: 24px; }
+      .main-container .contact .left-container .m_top-2 {
+        display: block;
+        margin-top: 32px; }
+      .main-container .contact .left-container input[type="text"] {
+        min-width: 530px;
+        height: 56px;
+        margin-bottom: 50px;
+        border: 1px solid #131418;
+        border-radius: 2px; }
+        .main-container .contact .left-container input[type="text"]::placeholder {
+          font-size: 20px;
+          font-weight: 300; }
+      .main-container .contact .left-container input[type="checkbox"] {
+        transform: scale(1.45);
+        margin-bottom: 20px; }
+      .main-container .contact .left-container .product-label {
+        font-size: 19px;
+        font-weight: 300;
+        padding-left: 10px; }
+      .main-container .contact .left-container textarea {
+        width: 530px;
+        height: 217px;
+        resize: vertical;
+        border: 1px solid #131418;
+        border-radius: 2px;
+        font-size: 20px; }
+        .main-container .contact .left-container textarea::placeholder {
+          font-size: 20px;
+          font-weight: 300; }
+      .main-container .contact .left-container input[type="submit"] {
+        margin-top: 46px;
+        font-size: 25px;
+        font-weight: 300;
+        font-style: italic;
+        text-transform: uppercase;
+        text-align: center;
+        text-decoration: none;
+        color: #131418;
+        background: #fff;
+        border: 1px solid #131418;
+        border-radius: 4px;
+        padding: 3px 10px;
+        transition: all 0.5s ease; }
+        .main-container .contact .left-container input[type="submit"]:hover {
+          background: #fafafa;
+          cursor: pointer; }
+    .main-container .contact .right-container {
+      flex: 2;
+      width: 50%;
+      float: left;
+      padding-left: 5%; }
+      .main-container .contact .right-container h3 {
+        text-transform: capitalize;
+        font-size: 23px;
+        font-weight: 500;
+        font-style: italic;
+        padding-bottom: 35px; }
+      .main-container .contact .right-container h4 {
+        font-size: 23px;
+        font-weight: 300; }
+        .main-container .contact .right-container h4 span {
+          font-weight: 400; }
+      .main-container .contact .right-container .map {
+        float: left;
+        width: 80%;
+        height: 474px;
+        margin-top: 20%;
+        border: 1px solid #131418;
+        border-radius: 4px; }
+
+.footer-container {
+  width: 100%;
+  height: 70px;
+  line-height: 70px;
+  text-align: center;
+  background-color: #F9F9F9; }
+
+/*# sourceMappingURL=style.css.map */
