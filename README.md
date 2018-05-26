@@ -1,7 +1,7 @@
 # Never realized website.
 
 
-The MIT License (MIT)
+<b>The MIT License (MIT)</b>
 
 Copyright (c) 2015 Chris Kibble
 
