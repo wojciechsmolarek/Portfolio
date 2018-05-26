@@ -1,10 +1,6 @@
-<strong>Never realized website.<strong>
+# Never realized website.
 
-
-
-
-<br/><br/>
-<hr>
++# 
 
 The MIT License (MIT)
 
