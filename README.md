@@ -3,6 +3,8 @@
 https://wojciechsmolarek.github.io/Portfolio-project---never-realized/
 
 
+*due to tight schedule - no mobile version... yet
+
 ## License
 <b>The MIT License (MIT)</b>
 
